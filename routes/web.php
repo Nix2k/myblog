@@ -12,10 +12,7 @@
 */
 
 
-Route::get('/', function () {	
-    $login = (object)['link' => 'login', 'text' => 'Войти'];
-    return view('main')->with(['title' => 'Главная', 'login' => $login]);
-});
+Route::get('/', 'CPost@showAll');
 
 Route::get('/about', function () {	
     $login = (object)['link' => 'login', 'text' => 'Войти'];
