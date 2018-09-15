@@ -1,0 +1,373 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-size: 0;
+}
+
+.container {
+	max-width: 990px;
+	min-width: 700px;
+	margin: 0 auto;
+}
+
+header .top {
+	padding: 20px 0 20px 0;
+  	position: fixed;
+	width: 100%;
+	background-color: rgba(50,50,50,0.5);
+	z-index: 100;
+}
+
+header .container {
+	max-width: 940px;
+}
+
+header .logo {
+	display: inline-block;
+	padding-left: 10px;
+	font-family: "Cookie", cursive;
+	font-size: 36px;
+	color: #fed136;
+}
+
+header .top .container{
+	text-align: justify;
+}
+
+header .top .container::after {
+	display: inline-block;
+	width: 100%;
+	content: "";
+}
+
+nav {
+	display: inline-block;
+}
+
+nav .menu-item {
+	display: inline-block;
+	padding-left: 40px;
+}
+
+nav a {
+	font-family: "Montserrat", sans-serif;
+	font-size: 14px;
+	text-decoration: none;
+	color: #ffffff;
+}
+
+nav a:hover {
+	outline: #ffffff 1px dotted;
+	outline-offset: 2px;
+}
+
+header .content {
+	width: 100%;
+	height: 400px;
+	overflow: hidden;
+}
+
+header .content video {
+	width: 100%;
+	position: absolute;
+	z-index: -1;
+	top: -200px;
+	left: 0;
+}
+
+header .content h1 {
+	text-align: center;
+	padding: 180px 0 100px 0;
+	font-family: "Vollkorn", serif;
+	font-style: italic;
+	font-size: 45px;
+	color: #ffffff;
+}
+
+button, input[type="submit"] {
+	display: inline-block;
+	width: 240px;
+	height: 65px;
+	line-height: 65px;
+	background-color: #fed136;
+	border: 0px;
+	border-radius: 3px;
+	font-family: "Montserrat", sans-serif;
+	font-size: 18px;
+	font-weight: bold;
+	color: #ffffff;
+	vertical-align: middle;
+	text-decoration: none;
+  text-align: center;
+}
+
+button:hover, input[type="submit"]:hover {
+	background-color: #ffc600;
+}
+
+h3 {
+	padding: 40px 0 20px 0;
+	text-align: center;
+	font-family: "Montserrat", sans-serif;
+	font-size: 30px;
+	font-weight: bold;
+	color: #222222;
+}
+
+h4 {
+	padding: 10px 0 10px 0;
+	text-align: center;
+	font-family: "Vollkorn", serif;
+	font-style: italic;
+	font-size: 20px;
+	color: #777777;
+}
+
+main {
+	background-color: #ffffff;
+	margin: 0 auto;
+}
+
+main .content {
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+main h2 {
+	padding: 40px 0 20px 0;
+	text-align: center;
+	font-family: "Montserrat", sans-serif;
+	font-size: 30px;
+	font-weight: bold;
+	color: #222222;
+}
+
+main p {
+	max-width: 800px;
+	padding: 10px 0;
+	text-align: left;
+	font-family: "Montserrat", serif;
+	font-size: 20px;
+}
+
+#blog {
+	padding-bottom: 80px;
+	background-color: #ffffff;
+	text-align: center;
+}
+
+#contact {
+	padding-bottom: 80px;
+	background-color: #222222; 
+	text-align: center;
+}
+
+#contact h3 {
+	padding-top: 40px;
+  	color: #ffffff;
+}
+
+#contact .col-l {
+	display: inline-block;
+	vertical-align: top;
+	width: 50%;
+	padding-right: 15px;
+	padding-left: 25px;
+}
+
+#contact .col-r {
+	display: inline-block;
+	vertical-align: top;
+	width: 50%;
+	padding-right: 25px;
+	padding-left: 15px;
+}
+
+#contact input {
+	position: relative;
+	margin-bottom: 30px;
+	padding: 0 20px;
+	width: 100%;
+	height: 50px;
+	border-radius: 3px;
+	border-width: 0;
+	font-family: "Montserrat", sans-serif;
+	font-weight: bold;
+	font-size: 14px;
+	color: #222222;
+}
+
+#contact input[type="file"] {
+	display: none;
+}
+
+#contact .input-file label {
+     /* Растягиваем label на всю возможную площадь блока .file-upload */
+     display: block;
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     cursor: pointer;
+}
+
+#contact .input-file span {
+     line-height: 36px; /* Делаем вертикальное выравнивание текста, который написан на кнопке */
+}
+
+#contact .input-file {
+	position: relative;
+	margin-bottom: 30px;
+	padding: 0 20px;
+	width: 100%;
+	height: 50px;
+	border-radius: 3px;
+	border-width: 0;
+	font-family: "Montserrat", sans-serif;
+	font-weight: bold;
+	font-size: 14px;
+	color: #222222;
+	background: #ffffff;
+}
+
+#contact .input-file:hover {
+	position: relative;
+	margin-bottom: 30px;
+	padding: 0 20px;
+	width: 100%;
+	height: 50px;
+	border-radius: 3px;
+	border-width: 0;
+	font-family: "Montserrat", sans-serif;
+	font-weight: bold;
+	font-size: 14px;
+	color: #222222;
+	background: #aaaaaa;
+}
+
+#contact textarea {
+	padding: 18px 20px;
+	width: 100%;
+	height: 211px;
+	border-radius: 3px;
+	border-width: 0;
+	font-family: "Montserrat", sans-serif;
+	font-weight: bold;
+	font-size: 14px;
+	color: #222222;	
+}
+
+#contact input::-webkit-input-placeholder {
+	color: #bbbbbb;	
+}
+
+#contact input::-moz-input-placeholder {
+	color: #bbbbbb;	
+}
+
+#contact textarea::-webkit-input-placeholder {
+	color: #bbbbbb;	
+}
+
+#contact textarea::-moz-input-placeholder {
+	color: #bbbbbb;	
+}
+
+footer {
+	height: 90px;
+	line-height: 90px;
+	background-color: #ffffff;
+}
+
+address {
+	display: inline-block;
+	margin-top: -10px;
+	vertical-align: middle;
+	text-align: center;
+	font-family: "Montserrat", sans-serif;
+	font-size: 14px;
+	font-weight: normal;
+	font-style: normal;
+	color: #555555;
+}
+
+footer .social {
+	margin-top: -10px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+footer .soc-spcr {
+	display: inline-block;
+	width: 8px;
+	height: 41px;
+}
+
+footer .soc-ico {
+	display: inline-block;
+	vertical-align: middle;
+	background-image: url("http://bokov.gq/netology/html-final/img/social.png");
+	width: 42px;
+	height: 41px;
+	margin: 0 auto;
+}
+
+footer .soc-fb {
+	background-position: 0 top;
+}
+
+footer .soc-fb:hover {
+	background-position: 0 bottom;
+}
+
+footer .soc-goo {
+	background-position: -42px top;
+}
+
+footer .soc-goo:hover {
+	background-position: -42px bottom;
+}
+
+footer .soc-tw {
+	background-position: -84px top;
+}
+
+footer .soc-tw:hover {
+	background-position: -83px bottom;
+}
+
+footer .soc-pin {
+	background-position: -126px top;
+}
+
+footer .soc-pin:hover {
+	background-position: -126px bottom;
+}
+
+.article h2 {
+	padding: 20px 0 20px 0;
+	text-align: center;
+	font-family: "Vollkorn", serif;
+	font-style: italic;
+	font-size: 40px;
+	color: #222222;
+}
+
+.article p {
+	padding: 10px;
+	text-align: left;
+	font-family: "Vollkorn", serif;
+	font-size: 20px;
+	color: #000000;
+}
+
+.article .date {
+	padding: 10px;
+	text-align: left;
+	font-family: "Vollkorn", serif;
+	font-style: italic;
+	font-size: 15px;
+	color: #777777;
+}
