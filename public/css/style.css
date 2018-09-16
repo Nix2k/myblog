@@ -165,9 +165,11 @@ main p {
 
 main .links {
 	max-width: 800px;
+	width: 100%;
 	margin: 0 auto;
 	display: flex;
 	justify-content: space-between;
+	float: none;
 }
 
 main .links a {
@@ -188,24 +190,30 @@ main .links a:hover {
 	outline-offset: 2px;
 }
 
+main article {
+	float: none;
+	max-width: 800px;
+	margin: 0 auto;
+}
+
 #blog {
 	padding-bottom: 80px;
 	background-color: #ffffff;
 	text-align: center;
 }
 
-#contact {
+#form {
 	padding-bottom: 80px;
 	background-color: #222222; 
 	text-align: center;
 }
 
-#contact h3 {
+#form h3 {
 	padding-top: 40px;
   	color: #ffffff;
 }
 
-#contact .col-l {
+#form .col-l {
 	display: inline-block;
 	vertical-align: top;
 	width: 50%;
@@ -213,7 +221,7 @@ main .links a:hover {
 	padding-left: 25px;
 }
 
-#contact .col-r {
+#form .col-r {
 	display: inline-block;
 	vertical-align: top;
 	width: 50%;
@@ -221,7 +229,7 @@ main .links a:hover {
 	padding-left: 15px;
 }
 
-#contact input {
+#form input {
 	position: relative;
 	margin-bottom: 30px;
 	padding: 0 20px;
@@ -235,11 +243,11 @@ main .links a:hover {
 	color: #222222;
 }
 
-#contact input[type="file"] {
+#form input[type="file"] {
 	display: none;
 }
 
-#contact .input-file label {
+#form .input-file label {
      /* Растягиваем label на всю возможную площадь блока .file-upload */
      display: block;
      position: absolute;
@@ -250,11 +258,11 @@ main .links a:hover {
      cursor: pointer;
 }
 
-#contact .input-file span {
+#form .input-file span {
      line-height: 36px; /* Делаем вертикальное выравнивание текста, который написан на кнопке */
 }
 
-#contact .input-file {
+#form .input-file {
 	position: relative;
 	margin-bottom: 30px;
 	padding: 0 20px;
@@ -269,7 +277,7 @@ main .links a:hover {
 	background: #ffffff;
 }
 
-#contact .input-file:hover {
+#form .input-file:hover {
 	position: relative;
 	margin-bottom: 30px;
 	padding: 0 20px;
@@ -284,7 +292,7 @@ main .links a:hover {
 	background: #aaaaaa;
 }
 
-#contact textarea {
+#form textarea {
 	padding: 18px 20px;
 	width: 100%;
 	height: 211px;
@@ -296,19 +304,19 @@ main .links a:hover {
 	color: #222222;	
 }
 
-#contact input::-webkit-input-placeholder {
+#form input::-webkit-input-placeholder {
 	color: #bbbbbb;	
 }
 
-#contact input::-moz-input-placeholder {
+#form input::-moz-input-placeholder {
 	color: #bbbbbb;	
 }
 
-#contact textarea::-webkit-input-placeholder {
+#form textarea::-webkit-input-placeholder {
 	color: #bbbbbb;	
 }
 
-#contact textarea::-moz-input-placeholder {
+#form textarea::-moz-input-placeholder {
 	color: #bbbbbb;	
 }
 
@@ -383,28 +391,18 @@ footer .soc-pin:hover {
 	background-position: -126px bottom;
 }
 
-.article h2 {
-	padding: 20px 0 20px 0;
-	text-align: center;
-	font-family: "Vollkorn", serif;
-	font-style: italic;
-	font-size: 40px;
-	color: #222222;
-}
-
-.article p {
-	padding: 10px;
+#admin th {
+	padding: 5px;
 	text-align: left;
-	font-family: "Vollkorn", serif;
-	font-size: 20px;
-	color: #000000;
-}
-
-.article .date {
-	padding: 10px;
-	text-align: left;
-	font-family: "Vollkorn", serif;
-	font-style: italic;
+	font-family: "Montserrat", serif;
 	font-size: 15px;
 	color: #777777;
+}
+
+#admin td, #admin a {
+	padding: 5px;
+	text-align: left;
+	font-family: "Montserrat", serif;
+	font-size: 15px;
+	color: #222222;
 }

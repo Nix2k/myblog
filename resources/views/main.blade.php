@@ -14,7 +14,7 @@
                     <article>
                         <h4>{{ $post->title }}</h4>
                         <div class="content">
-                            {!! $post-> text !!}
+                            {!! strip_tags(substr($post->text, 0, 300), '<p><i><b><u><span><strong>') !!}...
                         </div>
                         <div class="links">
                             <a href="/post/{{ $post->id }}">Подробнее</a>

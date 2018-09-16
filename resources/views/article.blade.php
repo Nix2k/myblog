@@ -1,19 +1,15 @@
-{-- 
-    Шаблон страницы со статьёй
-    В него необходимо передать переменные:
-    article.title - Заголовок статьи
-    article.text - HTML контент статьи
-    article.date - дата и время публикации
---}
-
 @extends('layouts.master')
 
 @section('main')
-    <main>
-        <section class="article">
-            <h2>{{ article.title }}</h2>
-            {!! article.text !!}
-            <p class="date">{{ article.date }}</p>
-        </section>
-    </main>
+	<main>
+		<article class="article">
+			<h4>{{ $post->title }}</h4>
+			<div class="content">
+				{!! strip_tags($post->text, '<p><i><b><u><span><strong><a><img>') !!}
+			</div>
+			<div class="links">
+				<p> Опубликовано {{ $post->updated_at }} </p>
+			</div>
+		</article>
+	</main>
 @endsection

@@ -1,25 +1,16 @@
-<?/* 
-    Шаблон страницы с перечнем статей
-    В него необходимо передать массив статей articles
-    Каждый элемент массива имеет свойства:
-    .title - название
-    .shorttext - краткое содержание
-    .img - ссылка на миниатюру
-    .date - дата и время публикации
-*/?>
-
 @extends('layouts.master')
 
 @section('main')
     <main>
-        <section id="contact">
+        <section id="form">
             <div class="container">
                 <h3>Написать автору</h3>
-                <form enctype="multipart/form-data" method="post">
+                <form enctype="multipart/form-data" method="post" action="/admin/messages/add">
                     <div class="col-l">
                         <input type="text" name="name" placeholder="Имя *" required>
                         <input type="email" name="email" placeholder="e-mail *" required>
                         <input type="text" name="subject" placeholder="Тема">
+                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
                     </div>
                     <div class="col-r">
                         <textarea name="message" placeholder="Сообщение *" required></textarea>
