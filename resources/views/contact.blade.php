@@ -14,12 +14,12 @@
                     </div>
                     <div class="col-r">
                         <textarea name="message" placeholder="Сообщение *" required></textarea>
-                        <div>
+                        <!--div>
                             <label>
                                 <input type="file" name="file">
                                 <span>Приложить файл</span>
                             </label>
-                        </div>
+                        </div-->
                     </div>
                     <input type="submit" name="send" value="Отправить сообщение"></submit>
                 </form>

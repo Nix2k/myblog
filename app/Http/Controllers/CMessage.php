@@ -23,9 +23,12 @@ class CMessage extends Controller
 	//Добавить сообщение в БД и отправить e-mail
 	public static function add() {
 		$message = new Message;
+		$message->subject = strip_tags(htmlspecialchars($_POST['subject']));
+		$message->text = strip_tags(htmlspecialchars($_POST['message']));
 		$message->name = strip_tags(htmlspecialchars($_POST['name']));
-		$message->name = strip_tags(htmlspecialchars($_POST['name']));
-		$message->name = strip_tags(htmlspecialchars($_POST['name']));
-		$message->name = strip_tags(htmlspecialchars($_POST['name']));
+		$message->email = strip_tags(htmlspecialchars($_POST['email']));
+		$message->save();
+		header('Location: /');
+		exit;
 	}
 }
