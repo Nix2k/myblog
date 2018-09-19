@@ -25,6 +25,7 @@ class CMessage extends Controller
 	public static function add() {
 		$message = new Message;
 		$message->subject = strip_tags(htmlspecialchars($_POST['subject']));
+		$message->name = strip_tags(htmlspecialchars($_POST['name']));
 		$message->text = strip_tags(htmlspecialchars($_POST['message']));
 		$message->email = strip_tags(htmlspecialchars($_POST['email']));
 		$message->save();
