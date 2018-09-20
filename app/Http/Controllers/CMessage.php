@@ -32,7 +32,7 @@ class CMessage extends Controller
 'Сообщение от '.$message->name.' ('.$message->email.'):
 Тема: '.$message->subject.'
 Сообщение: '.$message->text
-		, function($msg, $Admin, $message) {
+		, function($msg) {
     		$msg->from('noreply.bokov@gmail.com', 'noreply.bokov');
     		$msg->to('mihail.bokov@gmail.com');
 		});
