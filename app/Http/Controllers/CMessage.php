@@ -29,7 +29,7 @@ class CMessage extends Controller
 		$message->text = strip_tags(htmlspecialchars($_POST['message']));
 		$message->email = strip_tags(htmlspecialchars($_POST['email']));
 		$message->save();
-		Mail::raw($message->text, function($msg) {
+		Mail::raw('qwertyasdfg', function($msg) {
     		$msg->from('noreply@bokov.gq', 'noreply');
     		$msg->to('mihail.bokov@gmail.com');
 		});

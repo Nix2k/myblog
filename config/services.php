@@ -15,8 +15,8 @@ return [
     */
 
     'mailgun' => [
-        'domain' => 'mail.bokov.gq',
-        'secret' => 'b4691b48671f257c86ff58829403413a-0e6e8cad-214f129e',
+        'domain' => '',
+        'secret' => '',
     ],
 
     'ses' => [
