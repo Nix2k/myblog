@@ -23,6 +23,7 @@ class CMessage extends Controller
 
 	//Добавить сообщение в БД и отправить e-mail
 	public static function add() {
+		$Admin = User::where('name', 'Admin')->first();
 		$message = new Message;
 		$message->subject = strip_tags(htmlspecialchars($_POST['subject']));
 		$message->name = strip_tags(htmlspecialchars($_POST['name']));
@@ -30,11 +31,12 @@ class CMessage extends Controller
 		$message->email = strip_tags(htmlspecialchars($_POST['email']));
 		Mail::raw(
 'Сообщение от '.$message->name.' ('.$message->email.'):
-Тема: '.$message->text.'
+Тема: '.$message->subject.'
 Сообщение: '.$message->text
 		, function($msg) {
     		$msg->from('noreply.bokov@gmail.com', 'noreply.bokov');
-    		$msg->to('mihail.bokov@gmail.com');
+    		$msg->to($Admin->email);
+    		$msg->subject($message->subject);
 		});
 		$message->save();
 		header('Location: /');
