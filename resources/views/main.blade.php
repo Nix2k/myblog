@@ -22,6 +22,13 @@
                         </div>
                     </article>
                 @endforeach
+                <div class="links">
+                    <p>Страницы:
+                        @for ($i = 1; $i < $posts->length/5+1; $i++)
+                            <a href="/?page={{ $i }}">{{ $i }}</a>
+                        @endfor
+                    </p>
+                </div>
             </div>
         </section>
     </main>
