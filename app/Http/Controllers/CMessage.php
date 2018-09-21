@@ -28,13 +28,15 @@ class CMessage extends Controller
 		$message->name = strip_tags(htmlspecialchars($_POST['name']));
 		$message->text = strip_tags(htmlspecialchars($_POST['message']));
 		$message->email = strip_tags(htmlspecialchars($_POST['email']));
-		Mail::raw(
-'Сообщение от '.$message->name.' ('.$message->email.'):
-Тема: '.$message->subject.'
-Сообщение: '.$message->text
-		, function($msg) {
-    		$msg->from('noreply.bokov@gmail.com', 'noreply.bokov');
-    		$msg->to('mihail.bokov@gmail.com');
+		$msgParams = [
+			'name' => $message->name,
+			'subject' => $message->subject,
+			'email' => $message->email,
+			'text' => $message->text
+		];
+		Mail::send('emails.message', $msgParams, function($msg)
+		{
+		    $msg->to('mihail.bokov@gmail.com')->subject('Новое сообщение в блоге');
 		});
 		$message->save();
 		header('Location: /');
