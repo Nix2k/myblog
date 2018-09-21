@@ -243,51 +243,6 @@ main article {
 	color: #222222;
 }
 
-#form .input-file label {
-     /* Растягиваем label на всю возможную площадь блока .file-upload */
-     display: block;
-     position: absolute;
-     top: 0;
-     left: 0;
-     width: 100%;
-     height: 100%;
-     cursor: pointer;
-}
-
-#form .input-file span {
-     line-height: 36px; /* Делаем вертикальное выравнивание текста, который написан на кнопке */
-}
-
-#form .input-file {
-	position: relative;
-	margin-bottom: 30px;
-	padding: 0 20px;
-	width: 100%;
-	height: 50px;
-	border-radius: 3px;
-	border-width: 0;
-	font-family: "Montserrat", sans-serif;
-	font-weight: bold;
-	font-size: 14px;
-	color: #222222;
-	background: #ffffff;
-}
-
-#form .input-file:hover {
-	position: relative;
-	margin-bottom: 30px;
-	padding: 0 20px;
-	width: 100%;
-	height: 50px;
-	border-radius: 3px;
-	border-width: 0;
-	font-family: "Montserrat", sans-serif;
-	font-weight: bold;
-	font-size: 14px;
-	color: #222222;
-	background: #aaaaaa;
-}
-
 #form textarea {
 	padding: 18px 20px;
 	width: 100%;
