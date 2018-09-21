@@ -6,30 +6,31 @@ use Illuminate\Database\Migrations\Migration;
 
 class CreateMessagesTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
-    public function up()
-    {
-        Schema::create('messages', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('subject')->nullable();
-            $table->text('text');
-            $table->string('name');
-            $table->string('email');
-            $table->timestamps();
-        });
-    }
+	/**
+	 * Run the migrations.
+	 *
+	 * @return void
+	 */
+	public function up()
+	{
+		Schema::create('messages', function (Blueprint $table) {
+			$table->increments('id');
+			$table->string('subject')->nullable();
+			$table->text('text');
+			$table->string('name');
+			$table->string('email');
+			$table->string('file')->nullable();
+			$table->timestamps();
+		});
+	}
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
-    public function down()
-    {
-        Schema::dropIfExists('messages');
-    }
+	/**
+	 * Reverse the migrations.
+	 *
+	 * @return void
+	 */
+	public function down()
+	{
+		Schema::dropIfExists('messages');
+	}
 }

@@ -34,6 +34,13 @@ class CMessage extends Controller
 			'email' => $message->email,
 			'text' => $message->text
 		];
+		if (($_FILES['file']['size'] > 0)&&($_FILES['file']['size'] <= 5000000)) {
+			$uploadDir = '/var/www/html/myblog/storage/app/public';
+			$fName = round(rand(10000, 99999)) . basename($_FILES['file']['name']);
+			$message->file = $fName;
+			$uploadFile = $uploaddir . $fName;
+			move_uploaded_file($_FILES['userfile']['tmp_name'], $uploadfile);
+		}
 		Mail::send('emails.message', $msgParams, function($msg)
 		{
 		    $msg->to('mihail.bokov@gmail.com')->subject('Новое сообщение в блоге');

@@ -12,6 +12,7 @@
 						<th>Тема</th>
 						<th>Сообщение</th>
 						<th>Получено</th>
+						<th>Вложение</th>
 					</tr>
 					@foreach ($messages as $message)
 					<tr>
@@ -21,6 +22,7 @@
 						<td>{{ $message->subject }}</td>
 						<td>{{ $message->text }}</td>
 						<td>{{ $message->updated_at}}</td>
+						<td>{{ $message->file}}</td>
 					</tr>
 					@endforeach
 				</table>

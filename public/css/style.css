@@ -243,10 +243,6 @@ main article {
 	color: #222222;
 }
 
-#form input[type="file"] {
-	display: none;
-}
-
 #form .input-file label {
      /* Растягиваем label на всю возможную площадь блока .file-upload */
      display: block;
