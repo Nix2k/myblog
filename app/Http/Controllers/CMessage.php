@@ -38,8 +38,8 @@ class CMessage extends Controller
 			$uploadDir = '/var/www/html/myblog/storage/app/public';
 			$fName = round(rand(10000, 99999)) . basename($_FILES['file']['name']);
 			$message->file = $fName;
-			$uploadFile = $uploaddir . $fName;
-			move_uploaded_file($_FILES['userfile']['tmp_name'], $uploadfile);
+			$uploadFile = $uploadDir . $fName;
+			move_uploaded_file($_FILES['userfile']['tmp_name'], $uploadFile);
 		}
 		Mail::send('emails.message', $msgParams, function($msg)
 		{
