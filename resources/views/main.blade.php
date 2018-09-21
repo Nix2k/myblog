@@ -30,7 +30,7 @@
 							@else
 								<?php $style = ''; ?>
 							@endif
-							<a {{ $style }} href="/?page={{ $i }}">{{ $i }}</a>
+							<a {!! $style !!} href="/?page={{ $i }}">{{ $i }}</a>
 						@endfor
 					</p>
 				</div>
