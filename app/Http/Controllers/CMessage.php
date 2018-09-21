@@ -44,6 +44,7 @@ class CMessage extends Controller
 		Mail::send('emails.message', $msgParams, function($msg) //Отправка сообщения
 		{
 		    $msg->to('mihail.bokov@gmail.com')->subject('Новое сообщение в блоге');
+		    $msg->attach($uploadFile);
 		});
 		$message->save();
 		header('Location: /');
