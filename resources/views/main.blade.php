@@ -33,6 +33,7 @@
 							<a {!! $style !!} href="/?page={{ $i }}">{{ $i }}</a>
 						@endfor
 					</p>
+					<p> Сначала: <a href="/?page={{ $page }}&order=desc">новые</a> / <a href="/?page={{ $page }}&order=asc">старые</a></p>
 				</div>
 			</div>
 		</section>
