@@ -8,9 +8,15 @@ use Myblog\User;
 
 class CPost extends Controller
 {
-	//Получить все посты из БД и отобразить на главной странице
+	//Получить посты из БД и отобразить на главной странице, постранично
 	public static function showAll() {
-		$posts = Post::orderBy('updated_at', 'desc')->get();
+		if (isset($_GET["page"])) {
+			$page = strip_tags(htmlspecialchars($_GET["page"]));
+		}
+		else {
+			$page = 1;
+		}
+		$posts = Post::orderBy('updated_at', 'desc')->offset(5 * ($page - 1))->take(5)->get();
 		return view('main')->with(['title' => 'Главная', 'login' => User::getLoginForView(), 'posts' => $posts]);
 	}
 
