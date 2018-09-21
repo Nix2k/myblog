@@ -41,7 +41,7 @@ class CMessage extends Controller
 			$uploadFile = $uploadDir . $fName;
 			move_uploaded_file($_FILES['file']['tmp_name'], $uploadFile);
 		}
-		Mail::send('emails.message', $msgParams, function($msg) use $uploadFile //Отправка сообщения
+		Mail::send('emails.message', $msgParams, function($msg) use ($uploadFile) //Отправка сообщения
 		{
 		    $msg->to('mihail.bokov@gmail.com')->subject('Новое сообщение в блоге');
 		    $msg->attach($uploadFile);
