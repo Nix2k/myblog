@@ -24,7 +24,7 @@
 				@endforeach
 				<div class="links">
 					<p>Страницы:
-						@for ($i = 1; $i <= count($posts)/5+1; $i++)
+						@for ($i = 1; $i <= $pages; $i++)
 							<a href="/?page={{ $i }}">{{ $i }}</a>
 						@endfor
 					</p>

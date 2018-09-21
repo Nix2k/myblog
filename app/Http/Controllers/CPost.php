@@ -16,8 +16,9 @@ class CPost extends Controller
 		else {
 			$page = 1;
 		}
+		$pages = round(count(Post::all())/5)+1;
 		$posts = Post::orderBy('updated_at', 'desc')->offset(5 * ($page - 1))->take(5)->get();
-		return view('main')->with(['title' => 'Главная', 'login' => User::getLoginForView(), 'posts' => $posts]);
+		return view('main')->with(['title' => 'Главная', 'login' => User::getLoginForView(), 'posts' => $posts, 'pages' => $pages]);
 	}
 
 	//Получить пост из БД по его id и отобразить на странице статьи
