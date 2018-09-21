@@ -26,9 +26,9 @@
 					<p>Страницы:
 						@for ($i = 1; $i <= $pages; $i++)
 							@if ($page == $i)
-								@$style = 'style="font-weight: bold;"';
+								<?php $style = 'style="font-weight: bold;"'; ?>
 							@else
-								@$style = '';
+								<?php $style = ''; ?>
 							@endif
 							<a {{ $style }} href="/?page={{ $i }}">{{ $i }}</a>
 						@endfor
