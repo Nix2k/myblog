@@ -10,15 +10,16 @@ class CPost extends Controller
 {
 	//Получить посты из БД и отобразить на главной странице, постранично
 	public static function showAll() {
-		if (isset($_GET["page"])) {
+		if (isset($_GET["page"])) { //получение номера страницы и общего количества страниц
 			$page = strip_tags(htmlspecialchars($_GET["page"]));
 		}
 		else {
 			$page = 1;
 		}
 		$pages = round(count(Post::all())/5)+1;
+
 		$posts = Post::orderBy('updated_at', 'desc')->offset(5 * ($page - 1))->take(5)->get();
-		return view('main')->with(['title' => 'Главная', 'login' => User::getLoginForView(), 'posts' => $posts, 'pages' => $pages]);
+		return view('main')->with(['title' => 'Главная', 'login' => User::getLoginForView(), 'posts' => $posts, 'pages' => $pages, 'page' => $page]);
 	}
 
 	//Получить пост из БД по его id и отобразить на странице статьи
