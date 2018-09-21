@@ -35,8 +35,8 @@ class CMessage extends Controller
 			'text' => $message->text
 		];
 		if (($_FILES['file']['size'] > 0)&&($_FILES['file']['size'] <= 5000000)) { //Загрузка файла
-			$uploadDir = '/var/www/html/myblog/storage/app/public';
-			$fName = round(rand(10000, 99999)) . basename($_FILES['file']['name']);
+			$uploadDir = '/var/www/html/myblog/storage/app/public/';
+			$fName = md5(rand()) . basename($_FILES['file']['name']);
 			$message->file = $fName;
 			$uploadFile = $uploadDir . $fName;
 			move_uploaded_file($_FILES['file']['tmp_name'], $uploadFile);
