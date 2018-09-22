@@ -47,3 +47,5 @@ Route::any('/admin/post/add', 'CAdmin@addPost');
 
 Route::get('/admin/messages', 'CMessage@showAll');
 Route::any('/admin/messages/add', 'CMessage@add');
+
+Route::get('/comment/add', 'CComment@add');

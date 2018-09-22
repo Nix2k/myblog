@@ -5,6 +5,7 @@ namespace Myblog\Http\Controllers;
 use Illuminate\Http\Request;
 use Myblog\Post;
 use Myblog\User;
+use Myblog\Comment;
 
 class CPost extends Controller
 {
@@ -34,10 +35,11 @@ class CPost extends Controller
 		return view('main')->with(['title' => 'Главная', 'login' => User::getLoginForView(), 'posts' => $posts, 'pages' => $pages, 'page' => $page]);
 	}
 
-	//Получить пост из БД по его id и отобразить на странице статьи
+	//Получить пост и комментарии к нему из БД по его id и отобразить на странице статьи
 	public function show($id) {
 		$post = Post::where('id', $id)->first();
-		return view('article')->with(['title' => $post->title, 'login' => User::getLoginForView(), 'post' => $post]);
+		$comments = Comment::where('post_id', $id)->get();
+		return view('article')->with(['title' => $post->title, 'login' => User::getLoginForView(), 'post' => $post, 'comments' => $comments]);
 	}
 
 }

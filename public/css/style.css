@@ -213,6 +213,10 @@ main article {
   	color: #ffffff;
 }
 
+#form p {
+  	color: #ffffff;
+}
+
 #form .col-l {
 	display: inline-block;
 	vertical-align: top;
