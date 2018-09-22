@@ -14,8 +14,8 @@
 		<div class="comments">
 			<div class="content">
 				@foreach ($comments as $comment)
-					<p>{{ $comment->name }}:</p>
-					<p>{{ $comment->text }}</p>
+					<p><b>{{ $comment->name }}:</b></p>
+					<p><i>{{ $comment->text }}</i></p>
 				@endforeach
 			</div>
 		</div>
@@ -34,7 +34,7 @@
 			let xhr = new XMLHttpRequest();
 			let text = document.getElementById("text").value;
 			let name = document.getElementById("name").value;
-			xhr.open('GET', `/comment/add?post_id={{ $post->id }}&text=${text}&name=${name}`, true);
+			xhr.open('GET', `/comment/add?post_id={{ $post->id }}&text=${text}&name=${name}`, false);
 			xhr.send();
 			location.reload();
 		});

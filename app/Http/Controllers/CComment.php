@@ -3,7 +3,7 @@
 namespace Myblog\Http\Controllers;
 
 use Illuminate\Http\Request;
-use use Myblog\Comment;
+use Myblog\Comment;
 
 class CComment extends Controller
 {
